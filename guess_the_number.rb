@@ -2,10 +2,6 @@ def print_line
   puts '=' * 50
 end
 
-def clear_console
-  puts '\e[H\e[2J'
-end
-
 def main
   print_line
 
@@ -67,7 +63,7 @@ def play_game(name, response)
       guesses += 1
     end
 
-    if guesses == max_guess
+    if guesses > max_guess
       puts 'Sorry, you lose. You ran out of guess!'
       puts "I was thinking of number #{number_to_guess}. Better luck next time!"
     else
